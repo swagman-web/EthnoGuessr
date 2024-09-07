@@ -3,29 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guess the Image Name</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        img {
-            max-width: 300px;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Ethno</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <h1>EthnoGuessr</h1>
-
-    <div id="imageDisplay"></div>
-
-    <input type="text" id="guessInput" placeholder="Guess the Country">
-    <button onclick="checkGuess()">Submit Guess</button>
-
-    <p id="result"></p>
+    <div class="game-container">
+        <h1>Image Guessing Game</h1>
+        <div id="imageDisplay" class="image-container">
+            <!-- Image will be loaded here -->
+        </div>
+        <input type="text" id="guessInput" class="guess-input" placeholder="Enter your guess..." />
+        <button onclick="checkGuess()" class="submit-button">Submit Guess</button>
+        <p id="result" class="result-text"></p>
+    </div>
 
     <script src="game.js"></script>
 
