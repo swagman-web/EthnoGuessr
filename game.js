@@ -362,4 +362,13 @@ function endGame() {
 }
 
 // Start the game when the page loads
-window.onload = startGame;
+window.onload = function() {
+    startGame();
+
+    // Add an event listener to detect when the Enter key is pressed in the guess input field
+    guessInput.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            checkGuess();  // Call checkGuess() when Enter is pressed
+        }
+    });
+};
